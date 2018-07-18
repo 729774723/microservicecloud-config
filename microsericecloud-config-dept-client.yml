@@ -1,0 +1,26 @@
+﻿spring: 
+ profiles: 
+ active: 
+ - dev
+---
+server: 
+ port: 8001
+spring: 
+ profiles: dev
+ application:  
+  name: microservicecloud-config-dept-client
+ datasource: 
+  type: com.alibaba.druid.pool.DruidDataSource
+  driver-class-name: org.git.mm.mysql.Driver
+  username: root
+  password: march8th
+  dbcp2: 
+   min-idle: 5
+   initial-size: 5
+   max-total: 5
+   max-wait-millils: 200
+
+eureka: 
+ client: 
+  service-url:
+   defaultZone: http://eureka7001.com:7001/eureka
